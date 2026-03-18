@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Tais Duarte Bernardi</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <style>
+        /* Estilos Globais - Dark Mode Moderno */
+        :root {
+            --bg-color: #10141c;
+            /* Azul-petróleo bem escuro */
+            --box-bg: #1a202c;
+            /* Cinza-antracite para boxes */
+            --text-main: #f0f4f8;
+            /* Cinza quase branco */
+            --text-sub: #b0bfc9;
+            /* Cinza médio para textos */
+            --highlight: #b0ff00;
+            /* Verde-limão neon moderno */
+            --highlight-sub: #00d4ff;
+            /* Azul elétrico secundário */
+            --tag-bg: rgba(255, 255, 255, 0.05);
+            /* Fundo sutil para tags */
+            --tag-border: rgba(255, 255, 255, 0.1);
+            /* Borda sutil */
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--highlight-sub);
+            transition: color 0.3s, transform 0.2s;
+        }
+
+        a:hover {
+            color: var(--highlight);
+            transform: scale(1.05);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Cabeçalho */
+        header {
+            text-align: center;
+            padding: 80px 0 40px;
+        }
+
+        header img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 4px solid var(--highlight);
+            box-shadow: var(--shadow);
+        }
+
+        header h1 {
+            margin: 20px 0 5px;
+            font-size: 2.8em;
+            letter-spacing: -1px;
+        }
+
+        header p {
+            margin: 0;
+            color: var(--highlight-sub);
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
+        /* Boxes Generais */
+        .dark-box {
+            background-color: var(--box-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Seções Gerais */
+        section h2 {
+            text-align: center;
+            color: var(--highlight);
+            font-size: 2em;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        /* Sobre Mim */
+        #sobre p {
+            color: var(--text-sub);
+            font-size: 1.1em;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Habilidades (Com Ícones e Centralizadas) */
+        .skills-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            /* Espaço entre as linhas */
+            margin-bottom: 40px;
+        }
+
+        .skills-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            /* Espaço entre as tags */
+            max-width: 100%;
+            /* Garante que não estoure no mobile */
+        }
+
+        .skill-tag {
+            background-color: var(--tag-bg);
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 0.95em;
+            border: 1px solid var(--tag-border);
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            /* Espaço entre ícone e texto */
+            transition: border-color 0.3s, transform 0.2s;
+        }
+
+        .skill-tag:hover {
+            border-color: var(--highlight);
+            transform: translateY(-2px);
+        }
+
+        /* Estilo dos ícones (garante que fiquem coloridos) */
+        .skill-tag i {
+            font-size: 1.4em;
+        }
+
+        /* Projetos (Cards) */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--highlight-sub);
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            font-size: 1.4em;
+            color: var(--text-main);
+        }
+
+        .project-card p {
+            color: var(--text-sub);
+            font-size: 0.95em;
+            margin-bottom: 20px;
+        }
+
+        /* Botão "Ver Código" */
+        /* Botão "Ver Código" */
+        .btn-code {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: transparent;
+            color: var(--highlight-sub) !important;
+            border: 2px solid var(--highlight-sub);
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .btn-code:hover {
+            background-color: var(--highlight-sub);
+            color: var(--bg-color) !important;
+        }
+
+        /* Contato (Botões Modernos) */
+        #contato h2 {
+            margin-bottom: 35px;
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            color: white !important;
+        }
+
+        /* Cores dos botões de contato */
+        .btn-linkedin {
+            background-color: #0077b5;
+        }
+
+        .btn-github {
+            background-color: #333;
+        }
+
+        .btn-whatsapp {
+            background-color: #25d366;
+        }
+
+        .btn-gmail {
+            background-color: #ea4335;
+        }
+
+        /* Vermelho Gmail sólido */
+
+        /* Efeito de hover para os botões de contato */
+        .contact-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-sub);
+            font-size: 0.85em;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="https://github.com/Duartetais.png" alt="Foto de Tais Duarte Bernardi">
+        <h1>Tais Duarte Bernardi</h1>
+        <p>Desenvolvedora Back-End | Engenharia de Software & Redes</p>
+    </header>
+
+    <div class="container">
+
+        <div class="dark-box" id="sobre">
+            <section>
+                <h2>Sobre Mim</h2>
+                <p>
+                    Em transição para a área de Tecnologia, utilizo minha base em Engenharia e experiência com processos
+                    para desenvolver soluções back-end, com foco em lógica, redes e arquitetura de software.
+                </p>
+            </section>
+        </div>
+
+        <section id="habilidades">
+            <h2>Habilidades Técnicas</h2>
+            <div class="skills-container">
+                <div class="skills-row">
+                    <div class="skill-tag"><i class="devicon-typescript-plain colored"></i>TypeScript</div>
+                    <div class="skill-tag"><i class="devicon-nodejs-plain-wordmark colored"></i>Node.js</div>
+                    <div class="skill-tag"><i class="devicon-javascript-plain colored"></i>JavaScript (ES6+)</div>
+                    <div class="skill-tag"><i class="devicon-mysql-plain-wordmark colored"></i>SQL</div>
+                </div>
+                <div class="skills-row">
+                    <div class="skill-tag"><i class="devicon-matcha-plain colored"></i>POO (Orientação a Objetos)</div>
+
+                    <div class="skill-tag"><i class="devicon-ssh-original-wordmark colored"></i>Redes & Infraestrutura
+                    </div>
+
+                    <div class="skill-tag"><i class="devicon-git-plain colored"></i>Git & GitHub</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="dark-box" id="projetos">
+            <section>
+                <h2>Projetos em Destaque</h2>
+                <div class="projects-grid">
+
+                    <div class="project-card">
+                        <h3>🏦 Banco do Brazil com Z</h3>
+                        <p>Simulação completa de um sistema bancário, explorando lógica de negócios, transações
+                            financeiras e conceitos avançados de POO.</p>
+                        <a href="https://github.com/Duartetais/conta_bancaria" class="btn-code" target="_blank">Ver
+                            Código</a>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>🛒 E-commerce Platform</h3>
+                        <p>Sistema de vendas desenvolvido para o encerramento do Bloco 1, focando em lógica de negócios
+                            e gestão de estoque.</p>
+                        <a href="https://github.com/Duartetais/projeto_final_bloco_01" class="btn-code"
+                            target="_blank">Ver Repositório</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section id="contato">
+            <h2>Vamos conversar?</h2>
+            <div class="contact-buttons">
+                <a href="https://www.linkedin.com/in/tais-bernardi/" class="contact-btn btn-linkedin"
+                    target="_blank">LinkedIn</a>
+                <a href="https://github.com/Duartetais" class="contact-btn btn-github" target="_blank">GitHub</a>
+                <a href="mailto:duuartetais@gmail.com" class="contact-btn btn-gmail">E-mail</a>
+                <a href="https://wa.me/5511911334279" class="contact-btn btn-whatsapp" target="_blank">WhatsApp</a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tais Duarte Bernardi. Construído com GitHub Pages.</p>
+    </footer>
