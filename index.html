@@ -7,7 +7,6 @@
     <title>Portfólio | Tais Duarte Bernardi</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <style>
-   
         :root {
             --bg-color: #10141c;
             --box-bg: #1a202c;
@@ -89,28 +88,23 @@
             margin-bottom: 30px;
         }
 
-        #sobre p {
+        .about-content p {
             color: var(--text-sub);
-            font-size: 1.1em;
+            font-size: 1.25em; /* Aumentado */
+            font-style: italic; /* Itálico */
             text-align: center;
-            max-width: 700px;
+            max-width: 800px;
             margin: 0 auto;
+            line-height: 1.8;
         }
-
-        .skills-container {
+     .skills-container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 40px;
-        }
-
-        .skills-row {
-            display: flex;
-            justify-content: center;
             flex-wrap: wrap;
+            justify-content: center;
             gap: 12px;
+            padding: 20px;
             max-width: 100%;
+            margin: 0 auto;
         }
 
         .skill-tag {
@@ -125,6 +119,7 @@
             align-items: center;
             gap: 10px;
             transition: border-color 0.3s, transform 0.2s;
+            white-space: nowrap;
         }
 
         .skill-tag:hover {
@@ -246,21 +241,10 @@
             color: white !important;
         }
 
-        .btn-linkedin {
-            background-color: #0077b5;
-        }
-
-        .btn-github {
-            background-color: #333;
-        }
-
-        .btn-whatsapp {
-            background-color: #25d366;
-        }
-
-        .btn-gmail {
-            background-color: #ea4335;
-        }
+        .btn-linkedin { background-color: #0077b5; }
+        .btn-github { background-color: #333; }
+        .btn-whatsapp { background-color: #25d366; }
+        .btn-gmail { background-color: #ea4335; }
 
         .contact-btn:hover {
             opacity: 0.9;
@@ -292,13 +276,8 @@
         }
 
         @media (max-width: 600px) {
-            header h1 {
-                font-size: 2em;
-            }
-            
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
+            header h1 { font-size: 2em; }
+            .projects-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -313,54 +292,53 @@
 
     <div class="container">
 
-        <div class="dark-box" id="sobre">
-           <section id="sobre-mim">
-    <h2>Sobre Mim</h2>
-    <div class="about-content">
-        <p>
-            Desenvolvedora com foco em tecnologias como TypeScript, JavaScript, HTML e CSS, além 
-            de experiência em Python e C. Possuo experiência prática na construção e deploy de APIs 
-            utilizando NestJS, com conhecimentos em integração com bancos de dados (TypeORM), 
-            segurança (JWT) e documentação técnica (Swagger). Formada pela Generation Brasil e 
-            atualmente cursando o último ano de Engenharia de Software.
-        </p>
-    </div>
-</section>
+        <div class="dark-box">
+            <section id="sobre-mim">
+                <h2>Sobre Mim</h2>
+                <div class="about-content">
+                    <p>
+                        Desenvolvedora com foco em tecnologias como TypeScript, JavaScript, HTML e CSS, além 
+                        de experiência em Python e C. Possuo experiência prática na construção e deploy de APIs 
+                        utilizando NestJS, com conhecimentos em integração com bancos de dados (TypeORM), 
+                        segurança (JWT) e documentação técnica (Swagger). Formada pela Generation Brasil e 
+                        atualmente cursando o último ano de Engenharia de Software.
+                    </p>
+                </div>
+            </section>
+        </div>
 
-        <section id="habilidades">
-    <h2>Habilidades Técnicas</h2>
-    <div class="skills-container">
-        <div class="skill-tag"><i class="devicon-nestjs-plain colored"></i>NestJS</div>
-        <div class="skill-tag"><i class="devicon-typescript-plain colored"></i>TypeScript</div>
-        <div class="skill-tag"><i class="devicon-nodejs-plain colored"></i>Node.js</div>
-        <div class="skill-tag"><i class="devicon-javascript-plain colored"></i>JavaScript (ES6+)</div>
-        <div class="skill-tag"><i class="devicon-python-plain colored"></i>Python</div>
-        <div class="skill-tag"><i class="devicon-c-plain colored"></i>C</div>
-        <div class="skill-tag"><i class="devicon-html5-plain colored"></i>HTML5</div>
-        <div class="skill-tag"><i class="devicon-css3-plain colored"></i>CSS3</div>
-
-        <div class="skill-tag"><i class="devicon-mysql-plain colored"></i>MySQL</div>
-        <div class="skill-tag"><i class="devicon-postgresql-plain colored"></i>PostgreSQL</div>
-        <div class="skill-tag"><i class="devicon-git-plain colored"></i>Git & GitHub</div>
-        <div class="skill-tag"><i class="devicon-githubactions-plain colored"></i>GitHub Actions</div>
-        
-        <div class="skill-tag"><i>🔑</i> JWT & Auth</div>
-        <div class="skill-tag"><i class="devicon-swagger-plain colored"></i>Swagger</div>
-        <div class="skill-tag"><i class="devicon-linux-plain colored"></i>Linux</div>
-        <div class="skill-tag"><i>🚀</i> Deploy</div>
-    </div>
-</section>
+        <div class="dark-box">
+            <section id="habilidades">
+                <h2>Habilidades Técnicas</h2>
+                <div class="skills-container">
+                    <div class="skill-tag"><i class="devicon-nestjs-plain colored"></i>NestJS</div>
+                    <div class="skill-tag"><i class="devicon-typescript-plain colored"></i>TypeScript</div>
+                    <div class="skill-tag"><i class="devicon-nodejs-plain colored"></i>Node.js</div>
+                    <div class="skill-tag"><i class="devicon-javascript-plain colored"></i>JavaScript (ES6+)</div>
+                    <div class="skill-tag"><i class="devicon-python-plain colored"></i>Python</div>
+                    <div class="skill-tag"><i class="devicon-c-plain colored"></i>C</div>
+                    <div class="skill-tag"><i class="devicon-html5-plain colored"></i>HTML5</div>
+                    <div class="skill-tag"><i class="devicon-css3-plain colored"></i>CSS3</div>
+                    <div class="skill-tag"><i class="devicon-mysql-plain colored"></i>MySQL</div>
+                    <div class="skill-tag"><i class="devicon-postgresql-plain colored"></i>PostgreSQL</div>
+                    <div class="skill-tag"><i class="devicon-git-plain colored"></i>Git & GitHub</div>
+                    <div class="skill-tag"><i class="devicon-githubactions-plain colored"></i>GitHub Actions</div>
+                    <div class="skill-tag"><i>🔑</i> JWT & Auth</div>
+                    <div class="skill-tag"><i class="devicon-swagger-plain colored"></i>Swagger</div>
+                    <div class="skill-tag"><i class="devicon-linux-plain colored"></i>Linux</div>
+                    <div class="skill-tag"><i>🚀</i> Deploy</div>
+                </div>
+            </section>
+        </div>
 
         <div class="dark-box" id="projetos">
             <section>
                 <h2>Projetos em Destaque</h2>
-                
                 <div class="highlight-box">
                     <p>🚀 API com autenticação JWT deployada e documentada com Swagger</p>
                 </div>
 
                 <div class="projects-grid">
-
                     <div class="project-card">
                         <h3>📝 Blog Platform API</h3>
                         <p>API full-stack completa com autenticação JWT, proteção de rotas, documentação Swagger interativa e deploy em produção no Render.</p>
@@ -406,7 +384,6 @@
                             <a href="https://github.com/Duartetais/Loja-de-Game" class="btn-code" target="_blank">Ver Código</a>
                         </div>
                     </div>
-
                 </div>
             </section>
         </div>
