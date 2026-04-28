@@ -1,0 +1,527 @@
+:root {
+    --bg: #0a0a0a;
+    --card-bg: #111;
+    --primary: #00d2ff;
+    --text: #fff;
+    --text-dim: #a1a1aa;
+    --border: #27272a;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle at top, #0f0f0f, #000);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+}
+
+/* ================= NAV ================= */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 8%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+#navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+#navbar a {
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#navbar a:hover {
+    color: var(--primary);
+}
+
+/* ================= HERO (AJUSTADO) ================= */
+
+.hero-main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+    padding: 140px 10% 50px;
+    gap: 20px; /* Reduzi um pouco o gap para os blocos não ficarem tão longe */
+}
+
+/* Lado Superior Esquerdo (Perfil) */
+.profile-corner {
+    align-self: flex-start;
+    text-align: left;
+    max-width: 500px;
+}
+
+.profile-corner .hero-image img {
+    width: 180px; 
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid var(--primary);
+    box-shadow: 0 0 30px rgba(0, 210, 255, 0.4);
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.profile-corner .hero-btns {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+    margin-top: 25px;
+}
+
+/* Lado Inferior Direito (Sobre Mim) */
+.about-corner {
+    align-self: flex-end;
+    margin-top: -20px; 
+}
+
+.gradient-text {
+    font-size: 3.5rem; /* Aumentei um pouco para dar mais destaque */
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    background: linear-gradient(90deg, #00d2ff, #6b36c8, #ff4ecd);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.profile-corner .hero-image img {
+    width: 180px; 
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid var(--primary);
+    box-shadow: 0 0 30px rgba(0, 210, 255, 0.4);
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.about-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 600px;
+    text-align: left;
+    transition: all 0.4s ease;
+}
+
+.about-card h2 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-family: 'Syne', sans-serif;
+}
+
+/* ================= BOTÕES ================= */
+
+.hero-btns {
+
+    display: flex;
+
+    gap: 15px;
+
+}
+
+
+.btn-primary {
+
+    background: linear-gradient(90deg,#00d2ff,#6b36c8);
+
+    padding: 10px 20px;
+
+    border-radius: 8px;
+
+    color: #fff;
+
+    text-decoration: none;
+
+}
+
+
+.btn-secondary {
+
+    border: 1px solid var(--primary);
+
+    padding: 10px 20px;
+
+    border-radius: 8px;
+
+    color: var(--text);
+
+    text-decoration: none;
+
+}
+
+
+/* ================= SEÇÕES ================= */
+
+.section {
+
+    padding: 100px 8%; 
+
+}
+
+/* ================= SOBRE MIM  ================= */
+
+.about-container {
+    align-self: start;align-self: flex-end;
+    margin-top: -40px; 
+    perspective: 1000px;
+}
+
+.about-card {
+    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+   border: 1px solid rgba(0, 210, 255, 0.3);
+    padding: 50px;
+    border-radius: 24px;
+    max-width: 900px; /* Largura para o texto não ficar muito esticado */
+    margin: 0 auto; 
+    text-align: center;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+/* Título dentro da box para dar destaque */
+.about-card h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin-bottom: 30px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.about-card p {
+   font-family: 'Inter', sans-serif;
+    color: #e4e4e7; 
+    line-height: 1.9; 
+    font-size: 1.15rem; 
+    font-weight: 400;
+}
+
+/* Efeito de brilho */
+.about-card:hover {
+    transform: translateY(-10px) rotateX(2deg);
+    border-color: var(--primary);
+    box-shadow: 0 0 40px rgba(0, 210, 255, 0.2);
+    background: rgba(255, 255, 255, 0.07);
+}
+
+/* ================= TECNOLOGIAS ================= */
+.section-header-box {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.title-large {
+    font-family: 'Syne', sans-serif;
+    font-size: 3.5rem; 
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+    color: var(--text);
+}
+
+.subtitle-gradient {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.tech-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Isso centraliza a última linha */
+    gap: 20px;
+    max-width: 1000px; /* Largura para caber os 6 itens da segunda linha */
+    margin: 40px auto 0 auto;
+    padding: 20px 0;
+}
+
+.tech-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.tech-box span {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+.tech-box i {
+    font-size: 3rem;
+    filter: drop-shadow(0 0 10px rgba(0, 210, 255, 0.3));
+}
+
+.tech-box:hover {
+   transform: translateY(-10px) rotateX(2deg);
+    border-color: var(--primary);
+    box-shadow: 0 0 40px rgba(0, 210, 255, 0.2);
+    background: rgba(255, 255, 255, 0.07);
+}
+
+
+/* ================= PROJETOS ================= */
+/* Container de Projetos */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    height: 100%; /* Garante que todos os cards tenham o mesmo tamanho */
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: 0 60px 40px rgba(0, 210, 255, 0.2);
+
+}
+
+.project-card h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.8rem;      
+    font-weight: 700;       
+    color: #ffffff;         
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;  
+}
+.project-card p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;   
+    font-weight: 400;       
+    color: #e4e4e7;         
+    line-height: 1.7;       
+    margin-bottom: 20px;
+}
+
+/* ================= AJUSTE DE ESPAÇO NO RODAPÉ ================= */
+.status-text {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 25px;    
+    display: block;        
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    opacity: 0.8;
+    margin-top: 10px;     
+}
+
+/* Estilo das Tags */
+.tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tech-badges span {
+    font-size: 0.7rem;
+    background: rgba(0, 210, 255, 0.1);
+    color: var(--primary);
+    padding: 5px 12px;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 210, 255, 0.2);
+}
+
+/* Links (GitHub/Externo) */
+.project-links {
+    display: flex;
+    gap: 15px;
+}
+
+.project-links a {
+    font-size: 1.5rem;
+    color: var(--text-dim);
+    transition: 0.3s;
+}
+
+.project-links a:hover {
+    color: var(--primary);
+}
+
+/* ================= CONTATO (NOVO) ================= */
+#contato {
+    text-align: center;
+}
+
+/* subtítulo */
+.contact-subtitle {
+    color: var(--text-dim);
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+/* botões */
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.contact-btn i {
+    font-size: 18px;
+}
+
+/* cores */
+.btn-linkedin { background: #0A66C2; }
+.btn-github { background: #24292e; }
+.btn-gmail { background: #EA4335; }
+.btn-whatsapp { background: #25D366; }
+
+/* hover */
+.contact-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 15px rgba(0,210,255,0.4);
+}
+
+/* status */
+.status-text {
+    margin-top: 25px;
+    color: var(--text-dim);
+}
+
+/* ================= FORMULÁRIO DE CONTATO (ADICIONAR) ================= */
+.contact-form-container {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+}
+
+.modern-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
+}
+
+.modern-form button {
+    cursor: pointer;
+    border: none;
+    align-self: center;
+    padding: 12px 40px;
+    transition: 0.3s;
+}
+
+.modern-form button:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* ================= STATUS ================= */
+.status {
+    width: 10px;
+    height: 12px;
+    background: #9422a8;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(151, 163, 157, 0.7); }
+    70% { box-shadow: 0 0 0 10px transparent; }
+    100% { box-shadow: 0 0 0 0 transparent; }
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ================= FUNDO ANIMADO ================= */
+#bg-tech {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}

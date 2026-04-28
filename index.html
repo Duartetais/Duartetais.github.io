@@ -4,406 +4,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio | Tais Duarte Bernardi</title>
+    <title>Tais Duarte | Backend Developer</title>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <style>
-        :root {
-            --bg-color: #10141c;
-            --box-bg: #1a202c;
-            --text-main: #f0f4f8;
-            --text-sub: #b0bfc9;
-            --highlight: #b0ff00;
-            --highlight-sub: #00d4ff;
-            --tag-bg: rgba(255, 255, 255, 0.05);
-            --tag-border: rgba(255, 255, 255, 0.1);
-            --shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-        }
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
 
-        a {
-            text-decoration: none;
-            color: var(--highlight-sub);
-            transition: color 0.3s, transform 0.2s;
-        }
-
-        a:hover {
-            color: var(--highlight);
-            transform: scale(1.05);
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            text-align: center;
-            padding: 80px 0 40px;
-        }
-
-        header img {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            border: 4px solid var(--highlight);
-            box-shadow: var(--shadow);
-        }
-
-        header h1 {
-            margin: 20px 0 5px;
-            font-size: 2.8em;
-            letter-spacing: -1px;
-        }
-
-        header p {
-            margin: 0;
-            color: var(--highlight-sub);
-            font-size: 1.3em;
-            font-weight: bold;
-        }
-
-        .dark-box {
-            background-color: var(--box-bg);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-            margin-bottom: 40px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        section h2 {
-            text-align: center;
-            color: var(--highlight);
-            font-size: 2em;
-            margin-top: 0;
-            margin-bottom: 30px;
-        }
-
-        .about-content p {
-            color: var(--text-sub);
-            font-size: 1.75em; /* Aumentado */
-            font-style: italic; /* Itálico */
-            font-weigth: bold;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.8;
-        }
-     .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
-            padding: 20px;
-            max-width: 100%;
-            margin: 0 auto;
-        }
-
-        .skill-tag {
-            background-color: var(--tag-bg);
-            padding: 12px 20px;
-            border-radius: 30px;
-            font-weight: bold;
-            font-size: 0.95em;
-            border: 1px solid var(--tag-border);
-            color: var(--text-main);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: border-color 0.3s, transform 0.2s;
-            white-space: nowrap;
-        }
-
-        .skill-tag:hover {
-            border-color: var(--highlight);
-            transform: translateY(-2px);
-        }
-
-        .skill-tag i {
-            font-size: 1.4em;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-        }
-
-        .project-card {
-            background-color: rgba(0, 0, 0, 0.2);
-            padding: 25px;
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: transform 0.3s, border-color 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--highlight-sub);
-        }
-
-        .project-card h3 {
-            margin-top: 0;
-            font-size: 1.4em;
-            color: var(--text-main);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .project-card p {
-            color: var(--text-sub);
-            font-size: 0.95em;
-            margin-bottom: 20px;
-        }
-
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 15px;
-        }
-
-        .tech-badge {
-            background-color: var(--tag-bg);
-            padding: 4px 10px;
-            border-radius: 15px;
-            font-size: 0.8em;
-            border: 1px solid var(--tag-border);
-            color: var(--highlight-sub);
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .btn-code {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: transparent;
-            color: var(--highlight-sub) !important;
-            border: 2px solid var(--highlight-sub);
-            border-radius: 6px;
-            font-weight: bold;
-            font-size: 0.9em;
-        }
-
-        .btn-code:hover {
-            background-color: var(--highlight-sub);
-            color: var(--bg-color) !important;
-        }
-
-        .btn-live {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: var(--highlight);
-            color: var(--bg-color) !important;
-            border: 2px solid var(--highlight);
-            border-radius: 6px;
-            font-weight: bold;
-            font-size: 0.9em;
-        }
-
-        .btn-live:hover {
-            background-color: transparent;
-            color: var(--highlight) !important;
-        }
-
-        #contato h2 {
-            margin-bottom: 35px;
-        }
-
-        .contact-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .contact-btn {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 25px;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 1em;
-            color: white !important;
-        }
-
-        .btn-linkedin { background-color: #0077b5; }
-        .btn-github { background-color: #333; }
-        .btn-whatsapp { background-color: #25d366; }
-        .btn-gmail { background-color: #ea4335; }
-
-        .contact-btn:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
-            transition: all 0.3s ease;
-        }
-
-        .highlight-box {
-            background-color: rgba(176, 255, 0, 0.1);
-            border: 1px solid var(--highlight);
-            border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .highlight-box p {
-            margin: 0;
-            color: var(--highlight);
-            font-weight: bold;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px 0;
-            color: var(--text-sub);
-            font-size: 0.85em;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        @media (max-width: 600px) {
-            header h1 { font-size: 2em; }
-            .projects-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+    <canvas id="bg-tech"></canvas>
 
-    <header>
-        <img src="https://github.com/Duartetais.png" alt="Foto de Tais Duarte Bernardi">
-        <h1>Tais Duarte Bernardi</h1>
-        <p>Full stack Developer </p>
-    </header>
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <div class="logo">Tais<span>.dev</span></div>
+        <ul>
+            <li><a href="#sobre-mim">Sobre</a></li>
+            <li><a href="#tecnologias">Tecnologias</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
 
-    <div class="container">
-
-        <div class="dark-box">
-            <section id="sobre-mim">
-                <h2>Sobre Mim</h2>
-                <div class="about-content">
-                    <p>
-                        Desenvolvedora com foco em tecnologias como TypeScript, JavaScript, HTML e CSS, além 
-                        de experiência em Python e C. Possuo experiência prática na construção e deploy de APIs 
-                        utilizando NestJS, com conhecimentos em integração com bancos de dados (TypeORM), 
-                        segurança (JWT) e documentação técnica (Swagger). Formada pela Generation Brasil e 
-                        atualmente cursando o último ano de Engenharia de Software.
-                    </p>
-                </div>
-            </section>
-        </div>
-
-        <div class="dark-box">
-            <section id="habilidades">
-                <h2>Habilidades Técnicas</h2>
-                <div class="skills-container">
-                    <div class="skill-tag"><i class="devicon-nestjs-plain colored"></i>NestJS</div>
-                    <div class="skill-tag"><i class="devicon-typescript-plain colored"></i>TypeScript</div>
-                    <div class="skill-tag"><i class="devicon-nodejs-plain colored"></i>Node.js</div>
-                    <div class="skill-tag"><i class="devicon-javascript-plain colored"></i>JavaScript (ES6+)</div>
-                    <div class="skill-tag"><i class="devicon-python-plain colored"></i>Python</div>
-                    <div class="skill-tag"><i class="devicon-c-plain colored"></i>C</div>
-                    <div class="skill-tag"><i class="devicon-html5-plain colored"></i>HTML5</div>
-                    <div class="skill-tag"><i class="devicon-css3-plain colored"></i>CSS3</div>
-                    <div class="skill-tag"><i class="devicon-mysql-plain colored"></i>MySQL</div>
-                    <div class="skill-tag"><i class="devicon-postgresql-plain colored"></i>PostgreSQL</div>
-                    <div class="skill-tag"><i class="devicon-git-plain colored"></i>Git & GitHub</div>
-                    <div class="skill-tag"><i class="devicon-githubactions-plain colored"></i>GitHub Actions</div>
-                    <div class="skill-tag"><i>🔑</i> JWT & Auth</div>
-                    <div class="skill-tag"><i class="devicon-swagger-plain colored"></i>Swagger</div>
-                    <div class="skill-tag"><i class="devicon-linux-plain colored"></i>Linux</div>
-                    <div class="skill-tag"><i>🚀</i> Deploy</div>
-                </div>
-            </section>
-        </div>
-
-        <div class="dark-box" id="projetos">
-            <section>
-                <h2>Projetos em Destaque</h2>
-                <div class="highlight-box">
-                    <p>🚀 API com autenticação JWT deployada e documentada com Swagger</p>
-                </div>
-
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <h3>📝 Blog Platform API</h3>
-                        <p>API full-stack completa com autenticação JWT, proteção de rotas, documentação Swagger interativa e deploy em produção no Render.</p>
-                        <div class="project-tech">
-                            <span class="tech-badge">NestJS</span>
-                            <span class="tech-badge">TypeScript</span>
-                            <span class="tech-badge">JWT</span>
-                            <span class="tech-badge">Swagger</span>
-                            <span class="tech-badge">TypeORM</span>
-                            <span class="tech-badge">Render</span>
-                        </div>
-                        <div class="btn-group">
-                            <a href="https://github.com/Duartetais/Blog_pessoal" class="btn-code" target="_blank">Ver Código</a>
-                            <a href="https://blog-pessoal-gh04.onrender.com/" class="btn-live" target="_blank">🚀 Testar API</a>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <h3>💊 Farmácia API</h3>
-                        <p>E-commerce farmacêutico com arquitetura enterprise, DTOs, ValidationPipe, GitHub Actions para CI/CD e separação de ambientes (dev/prod).</p>
-                        <div class="project-tech">
-                            <span class="tech-badge">NestJS</span>
-                            <span class="tech-badge">TypeScript</span>
-                            <span class="tech-badge">TypeORM</span>
-                            <span class="tech-badge">MySQL</span>
-                            <span class="tech-badge">CI/CD</span>
-                        </div>
-                        <div class="btn-group">
-                            <a href="https://github.com/Duartetais/projeto_bloco_02_farmacia" class="btn-code" target="_blank">Ver Código</a>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <h3>🎮 Game Store API</h3>
-                        <p>Primeira API RESTful desenvolvida com NestJS. CRUD completo de produtos e categorias com TypeORM e relacionamentos entre entidades.</p>
-                        <div class="project-tech">
-                            <span class="tech-badge">NestJS</span>
-                            <span class="tech-badge">TypeScript</span>
-                            <span class="tech-badge">TypeORM</span>
-                            <span class="tech-badge">MySQL</span>
-                        </div>
-                        <div class="btn-group">
-                            <a href="https://github.com/Duartetais/Loja-de-Game" class="btn-code" target="_blank">Ver Código</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <section id="contato">
-            <h2>Vamos conversar?</h2>
-            <div class="contact-buttons">
-                <a href="https://www.linkedin.com/in/tais-bernardi/" class="contact-btn btn-linkedin" target="_blank">LinkedIn</a>
-                <a href="https://github.com/Duartetais" class="contact-btn btn-github" target="_blank">GitHub</a>
-                <a href="mailto:duuartetais@gmail.com" class="contact-btn btn-gmail">E-mail</a>
-                <a href="https://wa.me/5511911334279" class="contact-btn btn-whatsapp" target="_blank">WhatsApp</a>
+    <!-- HERO -->
+    <section class="hero-main-container">
+        <div class="profile-corner">
+            <div class="hero-image">
+                <img src="https://github.com/Duartetais.png" alt="Tais Duarte">
             </div>
-        </section>
+            <div class="profile-info">
+                <h1 class="gradient-text">Tais Bernardi</h1>
+                <p>Engenheira de Software & Backend Developer</p>
+                <div class="hero-btns">
+                    <a href="#projetos" class="btn-primary">Ver Projetos</a>
+                    <a href="https://github.com/Duartetais" target="_blank" class="btn-secondary">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-corner">
+
+            <!-- SOBRE -->
+            <div class="about-card">
+                <h2>SOBRE MIM</h2>
+                <p>
+                    Desenvolvedora com foco em tecnologias como TypeScript, JavaScript, HTML e CSS, além
+                    de experiência em Python e C. Possuo experiência prática na construção e deploy de APIs
+                    utilizando NestJS, com conhecimentos em integração com bancos de dados (TypeORM),
+                    segurança (JWT) e documentação técnica (Swagger). Formada pela Generation Brasil e
+                    atualmente cursando o último ano de Engenharia de Software.
+        </div>
+        </div>
+    </section>
+    <!-- TECNOLOGIAS -->
+    <section id="tecnologias" class="section">
+        <div class="section-header-box">
+            <h2 class="title-large">Tech Stack</h2>
+            <span class="subtitle-gradient">Habilidades & Ferramentas</span>
+        </div>
+
+        <div class="tech-container">
+            <div class="tech-box"><i class="devicon-nestjs-plain colored"></i><span>NestJS</span></div>
+            <div class="tech-box"><i class="devicon-typescript-plain colored"></i><span>TypeScript</span></div>
+            <div class="tech-box"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></div>
+            <div class="tech-box"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+
+            <div class="tech-box"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+            <div class="tech-box"><i class="devicon-c-plain colored"></i><span>C</span></div>
+
+            <div class="tech-box"><i class="devicon-html5-plain colored"></i><span>HTML</span></div>
+            <div class="tech-box"><i class="devicon-css3-plain colored"></i><span>CSS</span></div>
+
+            <div class="tech-box"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+            <div class="tech-box"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
+
+            <div class="tech-box"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+            <div class="tech-box"><i class="devicon-github-original colored"></i><span>GitHub</span></div>
+
+            <div class="tech-box"><span class="icon-placeholder">🔐</span><span>JWT</span></div>
+            <div class="tech-box"><span class="icon-placeholder">📄</span><span>Swagger</span></div>
+            <div class="tech-box"><span class="icon-placeholder">🐧</span><span>Linux</span></div>
+            <div class="tech-box"><span class="icon-placeholder">🚀</span><span>Deploy</span></div>
+        </div>
+    </section>
+
+    <!-- PROJETOS -->
+   <section id="projetos" class="section">
+    <div class="section-header-box">
+        <h2 class="title-large">Projetos</h2>
+        <span class="subtitle-gradient">Destaques em Backend & API Design</span>
+    </div>
+
+    <div class="projects-grid">
+        <div class="project-card">
+            <div>
+                <h3>Blog Platform API</h3>
+                <p>API completa para gerenciamento de conteúdo com autenticação e temas. Confira a documentação interativa no link de Deploy.</p>
+                <div class="tech-badges">
+                    <span>NestJS</span>
+                    <span>TypeScript</span>
+                    <span>PostgreSQL</span>
+                    <span>JWT</span>
+                </div>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/Duartetais/Blog_pessoal" target="_blank" title="Código Fonte"><i class='bx bxl-github'></i></a>
+                <a href="https://blog-pessoal-gh04.onrender.com/swagger" target="_blank" title="Link do Deploy (Swagger)"><i class='bx bx-link-external'></i></a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div>
+                <h3>Game Store API</h3>
+                <p>Sistema de e-commerce escalável para games, com foco em arquitetura de microsserviços e validação de dados rigorosa.</p>
+                <div class="tech-badges">
+                    <span>NestJS</span>
+                    <span>TypeScript</span>
+                    <span>TypeORM</span>
+                    <span>MySQL</span>
+                </div>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/Duartetais/nestjs-gamestore-api" target="_blank" title="Código Fonte"><i class='bx bxl-github'></i></a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div>
+                <h3>Farmácia API</h3>
+                <p>Gestão farmacêutica inteligente organizada por categorias de medicamentos, priorizando a performance e integridade dos dados.</p>
+                <div class="tech-badges">
+                    <span>NestJS</span>
+                    <span>TypeScript</span>
+                    <span>TypeORM</span>
+                    <span>MySQL</span>
+                </div>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/Duartetais/nestjs-pharmacy-api" target="_blank" title="Código Fonte"><i class='bx bxl-github'></i></a>
+            </div>
+        </div>
+    </div>
+</section>
 
     </div>
 
-    <footer>
-        <p>&copy; 2026 Tais Duarte Bernardi. Construído com GitHub Pages.</p>
-    </footer>
+    <section id="contato" class="section">
+    <div class="section-header-box">
+        <h2 class="title-large">Contato</h2>
+        <span class="subtitle-gradient">Vamos construir algo juntos?</span>
+    </div>
+
+    <div class="contact-form-container">
+        <form action="https://formspree.io/f/seu-id" method="POST" class="modern-form">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Seu Nome" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Seu E-mail" required>
+            </div>
+            <div class="form-group">
+                <textarea name="message" placeholder="Sua Mensagem" rows="5" required></textarea>
+            </div>
+            
+            <input type="hidden" name="_next" value="sent.html">
+            
+            <button type="submit" class="btn-primary">Enviar Mensagem</button>
+        </form>
+    </div>
+
+    <div class="contact-buttons">
+        <a href="https://www.linkedin.com/in/tais-bernardi/" target="_blank" class="contact-btn btn-linkedin">
+            <i class="devicon-linkedin-plain"></i>
+            <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/Duartetais" target="_blank" class="contact-btn btn-github">
+            <i class="devicon-github-original"></i>
+            <span>GitHub</span>
+        </a>
+        <a href="mailto:duuartetais@gmail.com" class="contact-btn btn-gmail">
+            <i class="devicon-google-plain"></i>
+            <span>E-mail</span>
+        </a>
+        <a href="https://wa.me/5511911334279" target="_blank" class="contact-btn btn-whatsapp">
+            <i class="devicon-whatsapp-plain"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <p class="status-text">
+        <span class="status"></span>
+        Aberta a oportunidades e novos desafios
+    </p>
+
+    <p class="copy">
+        &copy; 2026 Tais Bernardi.
+    </p>
+</section>
+
+
+    <!-- SCRIPT SEMPRE NO FINAL -->
+    <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>
