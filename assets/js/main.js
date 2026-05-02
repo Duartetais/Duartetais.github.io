@@ -68,7 +68,7 @@ function connect() {
             let distance = Math.sqrt(dx * dx + dy * dy);
 
             if (distance < 150) {
-                // A linha fica mais visível quanto mais perto estão as partículas
+            
                 ctx.strokeStyle = `rgba(0, 210, 255, ${1 - distance / 150})`;
                 ctx.lineWidth = 0.5;
                 ctx.beginPath();
@@ -90,5 +90,64 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
+/* --- FINAL DA SUA ANIMAÇÃO --- */
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => {
+        p.update();
+        p.draw();
+    });
+    connect();
+    requestAnimationFrame(animate);
+}
+
 init();
-animate();
+animate(); 
+
+const formulario = document.getElementById("meu-formulario");
+const statusEnvio = document.getElementById("status-envio");
+
+if (formulario) {
+    formulario.addEventListener("submit", async function(event) {
+        event.preventDefault();
+        
+        const botao = document.getElementById("botao-enviar");
+        const dados = new FormData(event.target);
+        
+        
+        const containerPai = document.querySelector(".contato-container");
+        
+        botao.disabled = true;
+        botao.innerText = "Enviando...";
+
+        try {
+            const response = await fetch("https://formspree.io/f/xgodoobj", {
+                method: 'POST',
+                body: dados,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+              
+                containerPai.innerHTML = `
+                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 200px; text-align: center;">
+                        <h3 style="color: #00d2ff; margin-bottom: 10px;">Mensagem enviada com sucesso!</h3>
+                        <p style="color: #fff; opacity: 0.8;">Obrigado pelo contato, responderei em breve.</p>
+                    </div>
+                `;
+            } else {
+                statusEnvio.innerHTML = "Erro ao enviar. Tente novamente.";
+                statusEnvio.style.color = "#ff4c4c";
+            }
+        } catch (error) {
+            statusEnvio.innerHTML = "Erro de conexão.";
+            statusEnvio.style.color = "#ff4c4c";
+        } finally {
+          
+            if (document.getElementById("botao-enviar")) {
+                botao.disabled = false;
+                botao.innerText = "Enviar Mensagem";
+            }
+        }
+    });
+}

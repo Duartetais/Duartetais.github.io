@@ -56,7 +56,7 @@ body {
     flex-direction: column;
     min-height: 90vh;
     padding: 140px 10% 50px;
-    gap: 20px; /* Reduzi um pouco o gap para os blocos não ficarem tão longe */
+    gap: 20px; 
 }
 
 /* Lado Superior Esquerdo (Perfil) */
@@ -90,7 +90,7 @@ body {
 }
 
 .gradient-text {
-    font-size: 3.5rem; /* Aumentei um pouco para dar mais destaque */
+    font-size: 3.5rem; 
     font-family: 'Syne', sans-serif;
     font-weight: 800;
     background: linear-gradient(90deg, #00d2ff, #6b36c8, #ff4ecd);
@@ -98,16 +98,6 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
-}
-
-.profile-corner .hero-image img {
-    width: 180px; 
-    height: 180px;
-    border-radius: 50%;
-    border: 4px solid var(--primary);
-    box-shadow: 0 0 30px rgba(0, 210, 255, 0.4);
-    object-fit: cover;
-    margin-bottom: 15px;
 }
 
 .about-card {
@@ -129,78 +119,55 @@ body {
 /* ================= BOTÕES ================= */
 
 .hero-btns {
-
     display: flex;
-
     gap: 15px;
-
 }
-
 
 .btn-primary {
-
     background: linear-gradient(90deg,#00d2ff,#6b36c8);
-
     padding: 10px 20px;
-
     border-radius: 8px;
-
     color: #fff;
-
     text-decoration: none;
-
 }
-
 
 .btn-secondary {
-
     border: 1px solid var(--primary);
-
     padding: 10px 20px;
-
     border-radius: 8px;
-
     color: var(--text);
-
     text-decoration: none;
-
 }
-
 
 /* ================= SEÇÕES ================= */
 
 .section {
-
     padding: 100px 8%; 
-
 }
 
 /* ================= SOBRE MIM  ================= */
 
 .about-container {
-    align-self: start;align-self: flex-end;
+    align-self: flex-end;
     margin-top: -40px; 
     perspective: 1000px;
 }
 
 .about-card {
-    background: rgba(255, 255, 255, 0.05);
     background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(12px);
-   border: 1px solid rgba(0, 210, 255, 0.3);
+    border: 1px solid rgba(0, 210, 255, 0.3);
     padding: 50px;
     border-radius: 24px;
-    max-width: 900px; /* Largura para o texto não ficar muito esticado */
+    max-width: 900px; 
     margin: 0 auto; 
     text-align: center;
     position: relative;
     transition: all 0.4s ease;
 }
 
-/* Título dentro da box para dar destaque */
 .about-card h2 {
     font-family: 'Syne', sans-serif;
-    font-size: 2.2rem;
     color: var(--primary);
     margin-bottom: 30px;
     font-size: 2rem;
@@ -216,7 +183,6 @@ body {
     font-weight: 400;
 }
 
-/* Efeito de brilho */
 .about-card:hover {
     transform: translateY(-10px) rotateX(2deg);
     border-color: var(--primary);
@@ -224,7 +190,7 @@ body {
     background: rgba(255, 255, 255, 0.07);
 }
 
-/* ================= TECNOLOGIAS ================= */
+/* ================= TECNOLOGIAS (CORRIGIDO) ================= */
 .section-header-box {
     text-align: center;
     margin-bottom: 60px;
@@ -251,9 +217,9 @@ body {
 .tech-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Isso centraliza a última linha */
+    justify-content: center; 
     gap: 20px;
-    max-width: 1000px; /* Largura para caber os 6 itens da segunda linha */
+    max-width: 1000px; 
     margin: 40px auto 0 auto;
     padding: 20px 0;
 }
@@ -269,24 +235,27 @@ body {
     justify-content: center;
     gap: 15px;
     transition: all 0.3s ease;
+    width: 140px; /* Largura fixa para manter o padrão */
+    height: 140px; /* Altura fixa para ser um quadrado */
 }
 
-.tech-box span {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--text);
-    text-align: center;
-    display: block;
-    width: 100%;
-}
-
-.tech-box i {
-    font-size: 3rem;
+/* Regra essencial para as imagens SVG não estourarem */
+.tech-box img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
     filter: drop-shadow(0 0 10px rgba(0, 210, 255, 0.3));
 }
 
+.tech-box span {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text);
+    text-align: center;
+}
+
 .tech-box:hover {
-   transform: translateY(-10px) rotateX(2deg);
+    transform: translateY(-10px);
     border-color: var(--primary);
     box-shadow: 0 0 40px rgba(0, 210, 255, 0.2);
     background: rgba(255, 255, 255, 0.07);
@@ -294,7 +263,6 @@ body {
 
 
 /* ================= PROJETOS ================= */
-/* Container de Projetos */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -311,14 +279,13 @@ body {
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.3s ease, border-color 0.3s ease;
-    height: 100%; /* Garante que todos os cards tenham o mesmo tamanho */
+    height: 100%; 
 }
 
 .project-card:hover {
     transform: translateY(-10px);
     border-color: var(--primary);
     box-shadow: 0 60px 40px rgba(0, 210, 255, 0.2);
-
 }
 
 .project-card h3 {
@@ -353,7 +320,6 @@ body {
     margin-top: 10px;     
 }
 
-/* Estilo das Tags */
 .tech-badges {
     display: flex;
     flex-wrap: wrap;
@@ -370,10 +336,22 @@ body {
     border: 1px solid rgba(0, 210, 255, 0.2);
 }
 
-/* Links (GitHub/Externo) */
 .project-links {
     display: flex;
     gap: 15px;
+    align-items: center;
+}
+
+.project-links img {
+    width: 24px;
+    height: 24px;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.project-links img:hover {
+    opacity: 1;
+    transform: scale(1.1);
 }
 
 .project-links a {
@@ -386,24 +364,51 @@ body {
     color: var(--primary);
 }
 
-/* ================= CONTATO (NOVO) ================= */
+/* ================= SEÇÃO CONTATO ================= */
 #contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o form e os botões */
     text-align: center;
 }
 
-/* subtítulo */
 .contact-subtitle {
     color: var(--text-dim);
     margin-top: -20px;
     margin-bottom: 30px;
 }
 
-/* botões */
+.contato-container {
+    width: 100%;
+    max-width: 450px; 
+    margin: 0 auto 50px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 35px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+}
+
+#meu-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+#status-envio {
+    font-size: 1.2rem;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* BOTÕES DE REDES SOCIAIS */
 .contact-buttons {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
+    margin-bottom: 50px; 
 }
 
 .contact-btn {
@@ -418,49 +423,56 @@ body {
     transition: 0.3s;
 }
 
-.contact-btn i {
-    font-size: 18px;
+.contact-btn img {
+    width: 20px;
+    height: 20px;
 }
 
-/* cores */
-.btn-linkedin { background: #0A66C2; }
-.btn-github { background: #24292e; }
-.btn-gmail { background: #EA4335; }
-.btn-whatsapp { background: #25D366; }
+.btn-linkedin { background: #2b2c2b;}
+.btn-github { background: #2b2c2b;}
+.btn-gmail { background: #2b2c2b;}
+.btn-whatsapp { background: #2b2c2b; }
 
-/* hover */
 .contact-btn:hover {
     transform: translateY(-4px);
     box-shadow: 0 0 15px rgba(0,210,255,0.4);
 }
 
-/* status */
+/* STATUS DE OPORTUNIDADES */
 .status-text {
-    margin-top: 25px;
-    color: var(--text-dim);
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-top: 40px;    
+    margin-bottom: 15px;    
+    display: block;        
 }
 
-/* ================= FORMULÁRIO DE CONTATO (ADICIONAR) ================= */
+/* ================= FORMULÁRIO DE CONTATO ================= */
 .contact-form-container {
-    max-width: 600px;
-    margin: 0 auto 40px;
+    width: 100%;          /* Ocupa a largura disponível... */
+    max-width: 450px;     /* ...mas para exatamente em 450px */
+    margin: 0 auto 50px;  /* O 'auto' nas laterais é o que centraliza */
     background: rgba(255, 255, 255, 0.03);
     padding: 30px;
     border-radius: 20px;
     border: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+    
+    /* ADICIONE ESTA LINHA PARA GARANTIR */
+    display: block; 
 }
 
 .modern-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px; 
 }
 
 .form-group input, 
 .form-group textarea {
     width: 100%;
-    padding: 12px 15px;
-    background: rgba(0, 0, 0, 0.2);
+    padding: 15px; 
+    background: rgba(0, 0, 0, 0.4); 
     border: 1px solid var(--border);
     border-radius: 10px;
     color: #fff;
@@ -469,23 +481,42 @@ body {
     transition: 0.3s;
 }
 
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical; 
+}
+
 .form-group input:focus, 
 .form-group textarea:focus {
     border-color: var(--primary);
-    box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+}
+
+
+#status-envio {
+    margin-top: 25px;   
+    margin-bottom: 35px; 
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: block;
+    min-height: 24px;   
 }
 
 .modern-form button {
     cursor: pointer;
     border: none;
     align-self: center;
-    padding: 12px 40px;
+    padding: 14px 50px;
+    border-radius: 8px; 
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     transition: 0.3s;
 }
 
 .modern-form button:hover {
-    transform: scale(1.05);
-    filter: brightness(1.1);
+    transform: translateY(-3px); 
+    box-shadow: 0 5px 15px rgba(0, 210, 255, 0.4);
 }
 
 /* ================= STATUS ================= */
@@ -507,15 +538,28 @@ body {
 
 /* ================= RESPONSIVO ================= */
 @media (max-width: 768px) {
-    .hero-content {
-        flex-direction: column;
+    .hero-main-container {
+        padding-top: 100px;
+    }
+    .profile-corner {
+        align-self: center;
         text-align: center;
     }
-
+    .profile-corner .hero-btns {
+        justify-content: center;
+    }
+    .about-corner {
+        align-self: center;
+        margin-top: 20px;
+    }
     .projects-grid {
         grid-template-columns: 1fr;
     }
+    .gradient-text {
+        font-size: 2.5rem;
+    }
 }
+
 /* ================= FUNDO ANIMADO ================= */
 #bg-tech {
     position: fixed;
