@@ -1,9 +1,10 @@
 # 💻 Meu Portfólio Pessoal
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-green?style=for-the-badge" alt="Status"/>
-  <img src="https://img.shields.io/github/languages/top/Duartetais/Duartetais.github.io?style=for-the-badge" alt="Top Language"/>
-</p>
+<div align="center"> 
+	<img src="https://img.shields.io/badge/HTML-5-orange?style=for-the-badge&logo=html5" alt="HTML Badge" /> 
+	<img src="https://img.shields.io/badge/CSS-3-purple?style=for-the-badge&logo=css&logoColor=purple" alt="CSS Badge" /> 
+	<img src="https://img.shields.io/badge/JavaScript-ES6+-yellow?style=for-the-badge&logo=javascript&logoColor=yellow" alt="JavaScript Badge" /> 
+</div>
 
 ## 📝 Sobre o Projeto
 Este repositório contém o código-fonte do meu portfólio profissional. O objetivo principal é centralizar meus projetos, habilidades técnicas e experiências em um único lugar, facilitando o contato com recrutadores e outros desenvolvedores.
@@ -99,15 +100,15 @@ Você pode visualizar o portfólio online através do link abaixo:
 <tr>
 
 <td>
-<img height="140" src="https://github-readme-stats-sigma-five.vercel.app/api?username=jjeanpedro03&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=00000000&title_color=58A6FF&text_color=C9D1D9&icon_color=58A6FF&v=1"/>
+<img height="140" src="https://github-readme-stats-sigma-five.vercel.app/api?username=duartetais&how_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=00000000&title_color=58A6FF&text_color=C9D1D9&icon_color=58A6FF&v=1"/>
 </td>
 
 <td>
-<img height="140" src="https://github-readme-streak-stats.herokuapp.com/?user=jjeanpedro03&hide_border=true&background=00000000&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF&sideLabels=C9D1D9&dates=C9D1D9&currStreakNum=FFFFFF&longestStreakNum=FFFFFF&sideNums=FFFFFF&v=1"/>
+<img height="140" src="https://github-readme-streak-stats.herokuapp.com/?user=duuartetais&hide_border=true&background=00000000&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF&sideLabels=C9D1D9&dates=C9D1D9&currStreakNum=FFFFFF&longestStreakNum=FFFFFF&sideNums=FFFFFF&v=1"/>
 </td>
 
 <td>
-<img height="125" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=jjeanpedro03&layout=compact&hide_border=true&bg_color=00000000&title_color=58A6FF&text_color=C9D1D9&v=1"/>
+<img height="125" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=duuartetaislayout=compact&hide_border=true&bg_color=00000000&title_color=58A6FF&text_color=C9D1D9&v=1"/>
 </td>
 
 </tr>
@@ -125,7 +126,17 @@ Você pode visualizar o portfólio online através do link abaixo:
 
 ## 👤 Autor
 **Tais Duarte Bernardi**
-*   [LinkedIn](https://www.linkedin.com/in/tais-bernardi/)
+*   [LinkedIn]()
 *   [Gmail](mailto:duuartetais@gmail.com)
+
+<p align="left">
+  <a href="https://www.linkedin.com/in/tais-bernardi/">
+    <img src="https://skillicons.dev/icons?i=linkedin" height="35"/>
+  </a>
+  &nbsp;
+  <a href="mailto:duuartetais@gmail.com">
+    <img src="https://skillicons.dev/icons?i=gmail" height="35"/>
+  </a>
+</p>
 
 ---
