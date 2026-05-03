@@ -126,8 +126,7 @@ Você pode visualizar o portfólio online através do link abaixo:
 
 ## 👤 Autor
 **Tais Duarte Bernardi**
-*   [LinkedIn]()
-*   [Gmail](mailto:duuartetais@gmail.com)
+
 
 <p align="left">
   <a href="https://www.linkedin.com/in/tais-bernardi/">
