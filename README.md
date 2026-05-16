@@ -94,7 +94,7 @@ Você pode visualizar o portfólio online através do link abaixo:
 
 ---
 
-<h2 align="center">📊 GitHub Stats</h2>
+<h2 align="center">📊 GitHub Status</h2>
 
 <table>
 <tr>
