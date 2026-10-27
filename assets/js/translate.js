@@ -20,10 +20,10 @@
             "terminal.network": "Linux · Cisco · Wireshark",
             "terminal.status": "aberta a novos desafios",
 
-            "stats.apis": "APIs REST",
-            "stats.backend": "backend principal",
-            "stats.network": "topologias de rede",
-            "stats.servers": "servidores & Apache",
+            "stats.apis": "Desenvolvimento de APIs REST",
+            "stats.backend": "Bancos de dados relacionais e NoSQL",
+            "stats.network": "Redes e topologias",
+            "stats.servers": "Servidores, Apache e computação em nuvem",
 
             "about.title": "Sobre mim",
             "about.p1": "Estudante do último ano de Engenharia de Software, com formação complementar em Redes de Computadores. No desenvolvimento, atuo com TypeScript, JavaScript e Python, construindo e publicando APIs com NestJS, TypeORM, JWT e Swagger.",
@@ -42,7 +42,7 @@
             "contact.title": "Vamos conversar?",
             "contact.subtitle": "Aberta a oportunidades e novos desafios.",
 
-            "footer.version": "protótipo de layout v4"
+            "footer.version": "portfólio v4"
         },
 
         en: {
@@ -62,10 +62,10 @@
             "terminal.network": "Linux · Cisco · Wireshark",
             "terminal.status": "open to new challenges",
 
-            "stats.apis": "REST APIs",
-            "stats.backend": "main backend stack",
-            "stats.network": "network topologies",
-            "stats.servers": "servers & Apache",
+            "stats.apis": "REST API development",
+            "stats.backend": "Relational and NoSQL databases",
+            "stats.network": "Networks and topologies",
+            "stats.servers": "Servers, Apache and cloud computing",
 
             "about.title": "About me",
             "about.p1": "Final-year Software Engineering student with additional training in Computer Networks. I work with TypeScript, JavaScript and Python, building and publishing APIs with NestJS, TypeORM, JWT and Swagger.",
@@ -84,7 +84,7 @@
             "contact.title": "Let's talk?",
             "contact.subtitle": "Open to new opportunities and challenges.",
 
-            "footer.version": "layout prototype v4"
+            "footer.version": "portfolio v4"
         }
     };
 
@@ -159,7 +159,8 @@
             button.type = "button";
             button.textContent = language.toUpperCase();
             button.setAttribute("data-language", language);
-            button.setAttribute("aria-label",
+            button.setAttribute(
+                "aria-label",
                 language === "pt" ? "Português" : "English"
             );
             button.setAttribute("aria-pressed", "false");
